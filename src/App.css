@@ -1,0 +1,312 @@
+.App {
+  text-align: center;
+  font-family: 'Arial', sans-serif; /* Use a clean, modern font */
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #f8f9fa; /* Lighten the background color */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #333; /* Darker text for better contrast */
+  padding: 20px; /* Add padding for spacing */
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.go-to-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: 5px 0;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.go-to-list-item button {
+  margin-left: 10px;
+}
+
+.go-to-list-item:hover {
+  transform: translateY(-2px); /* Lift effect on hover */
+}
+
+.discover-restaurant-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: 5px 0;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.discover-restaurant-item button {
+  margin-left: 10px;
+}
+
+.discover-restaurant-item:hover,
+.go-to-list-item:hover,
+.contacts-go-to-list-item:hover {
+  transform: translateY(-2px); /* Lift effect on hover */
+}
+
+.message-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.message-form select,
+.message-form input {
+  margin: 5px 0;
+  padding: 8px;
+  width: 200px;
+}
+
+.message-form button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #61dafb;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.message-form button:hover {
+  background-color: #21a1f1;
+}
+
+.chat-window {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 300px;
+  max-height: 400px;
+  overflow-y: auto;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  z-index: 1000;
+  color: #000; /* Ensure text color is black */
+}
+
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.chat-header h3 {
+  margin: 0;
+  color: #007bff; /* Blue color for chat header */
+}
+
+.chat-header button {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.chat-header .close {
+  font-size: 24px;
+  color: red;
+  cursor: pointer;
+}
+
+.chat-header .minimize {
+  font-size: 20px;
+  color: #000;
+}
+
+.chat-contacts {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.contact-button {
+  background-color: #f0f0f0;
+  border: none;
+  padding: 8px;
+  margin: 2px 0;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 0.3s;
+}
+
+.contact-button.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.chat-history {
+  max-height: 200px;
+  overflow-y: auto;
+  color: #000; /* Ensure chat history text is black */
+}
+
+.chat-history ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.chat-history li {
+  margin-bottom: 5px;
+  color: #000; /* Ensure each message text is black */
+}
+
+.chat-history p {
+  color: #888; /* Keep placeholder text a lighter gray */
+}
+
+.chat-modal {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 300px;
+  max-height: 400px;
+  overflow-y: auto;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  z-index: 1000;
+}
+
+.chat-modal-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  color: #000; /* Ensure modal content text is black */
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.chat-navigation {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+
+.chat-navigation button {
+  background-color: #f0f0f0;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.chat-navigation button.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.contacts-go-to-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: 5px 0;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.contacts-go-to-list-item button {
+  margin-left: 10px; /* Add space between the list item and the button */
+}
+
+.chat-controls {
+  display: flex;
+  gap: 15px; /* This can remain for spacing if needed */
+}
+
+.map-container {
+  width: 90%; /* Adjust width to leave some space on the sides */
+  height: 400px;
+  margin: 20px auto; /* Center the map and add vertical margin */
+  border: 1px solid #ccc; /* Add a border around the map */
+  border-radius: 8px; /* Optional: add rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: add a subtle shadow */
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #e9ecef; /* Subtle background for filters */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.filters label {
+  margin: 0 15px;
+  font-weight: bold; /* Make labels bold */
+}
+
+.filters input,
+.filters select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-left: 10px;
+}
+
+button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
