@@ -42,7 +42,7 @@ function App() {
             location: `${latitude},${longitude}`,
             radius: 1500,
             type: 'restaurant',
-            key: 'AIzaSyAfqc6ByrFwTBOfx8l9fSaVdeoWZ__FIRo', // Replace with your new API key
+            key: 'YOUR_GOOGLE_API_KEY', // Replace with your new API key
           },
         });
         setAvailableRestaurants(response.data.results);
